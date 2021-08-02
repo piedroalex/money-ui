@@ -1,5 +1,5 @@
 <div class="container">
-  <form autocomplete="off" #usuarioForm="ngForm">
+  <form autocomplete="off" #lancamentoForm="ngForm">
     <div class="ui-g">
       <div class="ui-g-12">
         <h1>Novo Lançamento</h1>
@@ -45,7 +45,7 @@
         <textarea pInputTextarea rows="3"></textarea>
       </div>
       <div class="ui-g-12">
-        <button pButton type="submit" label="Salvar" [disabled]="usuarioForm.invalid"></button>
+        <button pButton type="submit" label="Salvar" [disabled]="lancamentoForm.invalid"></button>
         <button pButton type="button" label="Novo" class="ui-button-info"></button>
         <a href="#">Voltar para a pesquisa</a>
       </div>

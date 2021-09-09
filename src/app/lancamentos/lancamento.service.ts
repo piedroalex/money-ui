@@ -9,7 +9,7 @@ export class LancamentoFiltro {
   dataVencimentoInicio: Date;
   dataVencimentoFim: Date;
   pagina = 0;
-  itensPorPagina = 5;
+  itensPorPagina = 3;
 }
 
 @Injectable()
@@ -52,5 +52,14 @@ export class LancamentoService {
 
         return resultado;
       })
+  }
+
+  excluir(codigo: number): Promise<void> {
+    const headers = new Headers();
+    headers.append('Authorization', 'Basic YWRtaW5AbW9uZXkuY29tOmFkbWlu');
+
+    return this.http.delete(`${this.lancamentosUrl}/${codigo}`, { headers })
+      .toPromise()
+      .then(() => null);
   }
 }

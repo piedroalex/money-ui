@@ -2,6 +2,7 @@ import { CoreModule } from './core/core.module';
 
 import { PessoasModule } from './pessoas/pessoas.module';
 import { LancamentosModule } from './lancamentos/lancamentos.module';
+import { SegurancaModule } from './seguranca/seguranca.module';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule,
     LancamentosModule,
     PessoasModule,
+    SegurancaModule,
     CoreModule,
     AppRoutingModule
   ],

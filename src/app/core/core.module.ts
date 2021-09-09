@@ -5,6 +5,7 @@ import { ConfirmationService } from 'primeng/components/common/confirmationservi
 import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 import { ToastyModule } from 'ng2-toasty';
 
+import { CategoriaService } from './../categorias/categoria.service';
 import { PessoaService } from './../pessoas/pessoa.service';
 import { LancamentoService } from './../lancamentos/lancamento.service';
 import { ErrorHandlerService } from './error-handler.service';
@@ -25,6 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   providers: [
     LancamentoService,
     PessoaService,
+    CategoriaService,
     ErrorHandlerService,
     ConfirmationService,
     { provide: LOCALE_ID, useValue: 'pt-BR'}

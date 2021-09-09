@@ -4,6 +4,8 @@ import { Http, Headers, URLSearchParams } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import * as moment from 'moment';
 
+import { Lancamento } from './../core/model';
+
 export class LancamentoFiltro {
   descricao: string;
   dataVencimentoInicio: Date;
@@ -61,5 +63,15 @@ export class LancamentoService {
     return this.http.delete(`${this.lancamentosUrl}/${codigo}`, { headers })
       .toPromise()
       .then(() => null);
+  }
+
+  adicionar(lancamento: Lancamento): Promise<Lancamento> {
+    const headers = new Headers();
+    headers.append('Authorization', 'Basic YWRtaW5AbW9uZXkuY29tOmFkbWlu');
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.post(this.lancamentosUrl, JSON.stringify(lancamento), { headers })
+      .toPromise()
+      .then(response => response.json());
   }
 }

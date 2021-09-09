@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
@@ -21,6 +22,8 @@ import { SharedModule } from 'app/shared/shared.module';
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
+
     InputTextModule,
     ButtonModule,
     DataTableModule,
@@ -29,7 +32,7 @@ import { SharedModule } from 'app/shared/shared.module';
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
-    FormsModule,
+
     CurrencyMaskModule,
     SharedModule
   ],

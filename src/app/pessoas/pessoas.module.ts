@@ -1,5 +1,4 @@
 import { DataTableModule } from 'primeng/components/datatable/datatable';
-import { FormsModule } from '@angular/forms';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
@@ -10,14 +9,18 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { PessoaCadastroComponent } from './pessoa-cadastro/pessoa-cadastro.component';
 import { SharedModule } from 'app/shared/shared.module';
+import { PessoasRoutingModule } from './pessoas-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+
     InputTextModule,
     ButtonModule,
     DataTableModule,
@@ -26,8 +29,9 @@ import { SharedModule } from 'app/shared/shared.module';
     SelectButtonModule,
     DropdownModule,
     InputMaskModule,
-    FormsModule,
-    SharedModule
+
+    SharedModule,
+    PessoasRoutingModule
   ],
   declarations: [
     PessoaCadastroComponent,

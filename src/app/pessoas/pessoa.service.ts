@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 export class PessoaFiltro {
   nome: string;
   pagina = 0;
-  itensPorPagina = 3;
+  itensPorPagina = 5;
 }
 
 @Injectable()
@@ -28,7 +28,7 @@ export class PessoaService {
       params.set('nome', filtro.nome);
     }
 
-    return this.http.get(`${this.pessoasUrl}?resumo`, { headers, search: params })
+    return this.http.get(`${this.pessoasUrl}`, { headers, search: params })
       .toPromise()
       .then(response => {
         const responseJson = response.json();

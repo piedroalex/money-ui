@@ -1,4 +1,7 @@
+import { PessoaService, PessoaFiltro } from './../pessoa.service';
 import { Component, OnInit } from '@angular/core';
+
+import { LazyLoadEvent } from 'primeng/components/common/lazyloadevent';
 
 @Component({
   selector: 'app-pessoas-pesquisa',
@@ -6,11 +9,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pessoas-pesquisa.component.css']
 })
 export class PessoasPesquisaComponent {
-  pessoas = [
-    { nome: 'Pedro', cidade: 'Teresina', estado: 'PI', ativo: true },
-    { nome: 'Renata', cidade: 'Caxias', estado: 'MA', ativo: false },
-    { nome: 'Clarissy', cidade: 'Elesbão Veloso', estado: 'PI', ativo: true },
-    { nome: 'Alex', cidade: 'Teresina', estado: 'PI', ativo: true },
-    { nome: 'Marcus', cidade: 'Fortaleza', estado: 'CE', ativo: false }
-  ]
+
+  totalRegistros = 0;
+  filtro = new PessoaFiltro();
+  pessoas = [];
+
+  constructor(private pessoaService: PessoaService){}
+
+  pesquisar(pagina = 0){
+    this.filtro.pagina = pagina;
+
+    this.pessoaService.pesquisar(this.filtro)
+      .then(resultado => {
+        this.totalRegistros = resultado.total;
+        this.pessoas = resultado.pessoas;
+      });
+  }
+
+  aoMudarPagina(event: LazyLoadEvent){
+    const pagina = event.first / event.rows;
+    this.pesquisar(pagina);
+  }
 }

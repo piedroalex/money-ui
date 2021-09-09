@@ -3,6 +3,8 @@ import { Http, Headers, URLSearchParams } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
+import { Pessoa } from './../core/model';
+
 export class PessoaFiltro {
   nome: string;
   pagina = 0;
@@ -69,5 +71,15 @@ export class PessoaService {
     return this.http.get(this.pessoasUrl, { headers })
       .toPromise()
       .then(response => response.json().content);
+  }
+
+  adicionar(pessoa: Pessoa): Promise<Pessoa> {
+    const headers = new Headers();
+    headers.append('Authorization', 'Basic YWRtaW5AbW9uZXkuY29tOmFkbWlu');
+    headers.append('Content-Type', 'application/json');
+
+    return this.http.post(this.pessoasUrl, JSON.stringify(pessoa), { headers })
+      .toPromise()
+      .then(response => response.json());
   }
 }

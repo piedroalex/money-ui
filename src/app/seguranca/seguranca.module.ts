@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RequestOptions, Http } from '@angular/http';
 
-import { InputTextModule } from 'primeng/components/inputtext/inputtext';
-import { ButtonModule } from 'primeng/components/button/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+
 import { AuthConfig, AuthHttp } from 'angular2-jwt';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';

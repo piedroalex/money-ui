@@ -1,5 +1,3 @@
-import { PessoasModule } from './pessoas/pessoas.module';
-import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { SegurancaModule } from './seguranca/seguranca.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
@@ -18,8 +16,6 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
-    LancamentosModule,
-    PessoasModule,
     SegurancaModule,
     CoreModule,
     AppRoutingModule

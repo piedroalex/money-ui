@@ -1,4 +1,4 @@
-import { DataTableModule } from 'primeng/datatable';
+import { TableModule } from 'primeng/table';
 import { InputMaskModule } from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
 import { SelectButtonModule } from 'primeng/selectbutton';
@@ -23,7 +23,7 @@ import { PessoasRoutingModule } from './pessoas-routing.module';
 
     InputTextModule,
     ButtonModule,
-    DataTableModule,
+    TableModule,
     TooltipModule,
     InputTextareaModule,
     SelectButtonModule,

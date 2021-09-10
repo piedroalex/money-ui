@@ -9,7 +9,7 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -22,6 +22,7 @@ import { LancamentosRoutingModule } from './lancamentos-rounting.module';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
 
     InputTextModule,
     ButtonModule,

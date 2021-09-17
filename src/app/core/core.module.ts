@@ -9,6 +9,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ToastyModule } from 'ng2-toasty';
 import { JwtHelper } from 'angular2-jwt';
 
+import { DashboardService } from './../dashboard/dashboard.service';
 import { CategoriaService } from './../categorias/categoria.service';
 import { PessoaService } from './../pessoas/pessoa.service';
 import { LancamentoService } from './../lancamentos/lancamento.service';
@@ -41,6 +42,7 @@ registerLocaleData(localePt);
     LancamentoService,
     PessoaService,
     CategoriaService,
+    DashboardService,
     AuthService,
     ErrorHandlerService,
     ConfirmationService,

@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,7 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpModule,
+
     SegurancaModule,
     CoreModule,
     AppRoutingModule

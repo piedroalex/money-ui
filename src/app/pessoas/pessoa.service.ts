@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpParams, HttpHeaders } from '@angular/common/http';
 
-import 'rxjs/add/operator/toPromise';
+
 
 import { Pessoa, Estado, Cidade } from './../core/model';
 import { environment } from 'environments/environment';

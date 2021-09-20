@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 import { ErrorHandlerService } from './../../core/error-handler.service';
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api';
 
 import { PessoaService } from './../pessoa.service';
 import { Pessoa } from './../../core/model';

@@ -1,5 +1,3 @@
-import { CurrencyMaskModule } from 'ng2-currency-mask';
-
 import { DropdownModule } from 'primeng/dropdown';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { CalendarModule } from 'primeng/calendar';
@@ -11,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FileUploadModule } from 'primeng/fileupload';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
+import { NgxCurrencyModule } from 'ngx-currency';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -37,7 +36,7 @@ import { LancamentosRoutingModule } from './lancamentos-rounting.module';
     FileUploadModule,
     ProgressSpinnerModule,
 
-    CurrencyMaskModule,
+    NgxCurrencyModule,
     SharedModule,
     LancamentosRoutingModule
   ],

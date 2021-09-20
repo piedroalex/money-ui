@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 
-import { Observable } from 'rxjs/Observable';
+import { Observable, from as observableFromPromise } from 'rxjs';
 
 import { AuthService } from './auth.service';
 
@@ -58,7 +58,7 @@ export class MoneyHttp extends HttpClient {
           return fn().toPromise();
         });
 
-        return Observable.fromPromise(chamadaNovoAccessToken);
+        return observableFromPromise(chamadaNovoAccessToken);
     } else {
       return fn();
     }

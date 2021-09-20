@@ -2,6 +2,6 @@ export const environment = {
   production: true,
   apiUrl: 'https://money-api.herokuapp.com',
 
-  tokenWhitelistedDomains: [ /money-api.herokuapp.com/ ],
-  tokenBlacklistedRoutes: [/\/oauth\/token/]
+  tokenWhitelistedDomains: [ new RegExp('money-api.herokuapp.com') ],
+  tokenBlacklistedRoutes: [ new RegExp('\/oauth\/token') ]
 };

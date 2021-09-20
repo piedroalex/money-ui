@@ -8,6 +8,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { FileUploadModule } from 'primeng/fileupload';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -32,6 +33,7 @@ import { LancamentosRoutingModule } from './lancamentos-rounting.module';
     CalendarModule,
     SelectButtonModule,
     DropdownModule,
+    FileUploadModule,
 
     CurrencyMaskModule,
     SharedModule,

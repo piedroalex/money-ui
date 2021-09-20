@@ -14,6 +14,10 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+a, button {
+  margin-right: .25em
+}
+
 label {
   font-weight: bold;
 }
@@ -40,7 +44,7 @@ label {
 }
 
 .col-acoes {
-  width: 90px;
+  width: 100px;
   text-align: center;
 }
 
@@ -53,5 +57,5 @@ label {
 }
 
 .col-acoes-header {
-  width: 90px;
+  width: 100px;
 }

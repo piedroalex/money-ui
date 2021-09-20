@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-import { ToastyService } from 'ng2-toasty';
+import { MessageService } from 'primeng/components/common/messageservice';
 import { LazyLoadEvent, ConfirmationService } from 'primeng/components/common/api';
 
 import { ErrorHandlerService } from './../../core/error-handler.service';
@@ -22,7 +22,7 @@ export class PessoasPesquisaComponent {
   constructor(
     private pessoaService: PessoaService,
     private errorHandler: ErrorHandlerService,
-    private toasty: ToastyService,
+    private messageService: MessageService,
     private confirmation: ConfirmationService,
     private title: Title
   ){}
@@ -64,7 +64,7 @@ export class PessoasPesquisaComponent {
         } else {
           this.grid.first = 0;
         }
-        this.toasty.success('Pessoa excluída com sucesso!');
+        this.messageService.add({ severity: 'success', detail: 'Pessoa excluída com sucesso!' });
       })
       .catch(erro => this.errorHandler.handle(erro));
   }
@@ -77,7 +77,7 @@ export class PessoasPesquisaComponent {
         const acao = novoStatus ? 'ativada' : 'desativada';
 
         pessoa.ativo = novoStatus;
-        this.toasty.success(`Pessoa ${acao} com sucesso!`);
+        this.messageService.add({ severity: 'success', detail: `Pessoa ${acao} com sucesso!` });
       })
       .catch(erro => this.errorHandler.handle(erro));
   }

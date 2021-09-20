@@ -4,9 +4,10 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
+import { MessageService } from 'primeng/components/common/messageservice';
 import { ConfirmationService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { ToastyModule } from 'ng2-toasty';
+import { GrowlModule } from 'primeng/growl';
 import { JwtHelper } from 'angular2-jwt';
 
 import { RelatoriosService } from './../relatorios/relatorios.service';
@@ -26,7 +27,7 @@ registerLocaleData(localePt);
   imports: [
     CommonModule,
     RouterModule,
-    ToastyModule.forRoot(),
+    GrowlModule,
     ConfirmDialogModule,
   ],
   declarations: [
@@ -36,7 +37,7 @@ registerLocaleData(localePt);
   ],
   exports: [
     NavbarComponent,
-    ToastyModule,
+    GrowlModule,
     ConfirmDialogModule
   ],
   providers: [
@@ -48,6 +49,7 @@ registerLocaleData(localePt);
     AuthService,
     ErrorHandlerService,
     ConfirmationService,
+    MessageService,
     JwtHelper,
     Title,
     { provide: LOCALE_ID, useValue: 'pt'}
